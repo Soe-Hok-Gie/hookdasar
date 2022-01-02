@@ -22,6 +22,21 @@ export default class Lifecycle extends Component {
     
     hendleSubmit = (event) =>{
         event.preventDefault();
+
+            fetch('https://jsonplaceholder.typicode.com/users/1', {
+            method: 'PUT',
+            body: JSON.stringify({
+              id: 1,
+              name:this.state.name
+            }),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+          })
+            .then((response) => response.json())
+            .then((json) =>{
+                console.log(json)
+            });
     }
 
     render() {
