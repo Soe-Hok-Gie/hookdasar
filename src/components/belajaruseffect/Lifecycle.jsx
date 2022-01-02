@@ -10,7 +10,15 @@ export default class Lifecycle extends Component {
         }
     }
     
-    componentDidMount ()
+    componentDidMount (){
+        fetch('https://jsonplaceholder.typicode.com/users/1')
+        .then((response) => response.json())
+        .then((json) => {
+            this.setState({
+                name:json.name
+            })
+        });
+    }
 
     render() {
         return (
