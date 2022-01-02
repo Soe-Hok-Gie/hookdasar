@@ -47,6 +47,10 @@ export default class Lifecycle extends Component {
             alert('nama berhasil diupdate');
         } 
     }
+
+    componentWillUnmount (){
+        console.log ("component dicopot");
+    }
      
     render() {
         return (
