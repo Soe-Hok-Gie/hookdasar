@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 // import Lifecycle from './Lifecycle'
 import Lifecyclehook from './Lifecyclehook'
 
+
+
 export default class index extends Component {
 
     constructor(props) {
@@ -30,3 +32,4 @@ export default class index extends Component {
         )
     }
 }
+
