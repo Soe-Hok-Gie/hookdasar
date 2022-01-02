@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Lifecycle from './Lifecycle'
+// import Lifecycle from './Lifecycle'
+import Lifecyclehook from './Lifecyclehook'
 
 export default class index extends Component {
 
@@ -22,7 +23,9 @@ export default class index extends Component {
                 <button onClick={()=> this.setState({isHide : !isHide})}>
                     {isHide ? "tampilkan" : "sembunyikan"}
                 </button>
-                {!isHide && <Lifecycle/> }
+                {/* {!isHide && <Lifecycle/> } */}
+                {!isHide && <Lifecyclehook/> }
+
             </div>
         )
     }
