@@ -19,6 +19,10 @@ export default class Lifecycle extends Component {
             })
         });
     }
+    
+    hendleSubmit = (event) =>{
+        event.preventDefault();
+    }
 
     render() {
         return (
@@ -26,7 +30,7 @@ export default class Lifecycle extends Component {
                 <h3>Name : {this.state.name}</h3>
                 <hr/>
                 <h3> update name :</h3>
-                <form>
+                <form onSubmit={(event)=> this.hendleSubmit(event)}>
                     <input type="text" placeholder="change name" name="name" 
                     onChange={(event) => this.setState({name : event.target.value})}
                 />
