@@ -14,8 +14,8 @@ const Lifecyclehook = () => {
         });
     },[])
 
-    hendleSubmit = (event) =>{
-        event.preventDefault();
+        const hendleSubmit = (event) =>{
+            event.preventDefault();
 
             fetch('https://jsonplaceholder.typicode.com/users/1', {
             method: 'PUT',
@@ -29,11 +29,15 @@ const Lifecyclehook = () => {
           })
             .then((response) => response.json())
             .then((json) =>{
-                this.setState({
-                    setUpdate:(true)
-                })
+                setUpdate (true)
             });
-    };
+        };
+      //componentdidupdate
+      useEffect(() => {
+        if (setUpdate) {
+            alert('nama berhasil diupdate');
+        } 
+    },[setUpdate])
     
     return (
         <div>
