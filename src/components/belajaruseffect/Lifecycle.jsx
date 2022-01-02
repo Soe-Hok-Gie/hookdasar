@@ -5,7 +5,8 @@ export default class Lifecycle extends Component {
         super(props)
     
         this.state = {
-            name:""
+            name:"",
+            isUpdate: false
              
         }
     }
@@ -35,10 +36,18 @@ export default class Lifecycle extends Component {
           })
             .then((response) => response.json())
             .then((json) =>{
-                console.log(json)
+                this.setState({
+                    isUpdate: true
+                })
             });
+    };
+    componentDidUpdate(){
+        const {isUpdate}=this.state;
+        if (isUpdate) {
+            alert('nama berhasil diupdate');
+        } 
     }
-
+     
     render() {
         return (
             <div>
