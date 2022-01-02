@@ -19,7 +19,10 @@ export default class index extends Component {
             <div>
                 <h1>perbedaan lifeCycle & hook </h1>
                 <hr/>
-                <Lifecycle/>
+                <button onClick={()=> this.setState({isHide : !isHide})}>
+                    {isHide ? "tampilkan" : "sembunyikan"}
+                </button>
+                {!isHide && <Lifecycle/> }
             </div>
         )
     }
