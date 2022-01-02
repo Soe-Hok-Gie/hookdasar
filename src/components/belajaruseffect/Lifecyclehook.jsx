@@ -14,9 +14,21 @@ const Lifecyclehook = () => {
         });
     },[])
 
+    // hendleSubmit = (event) =>{
+    //     event.preventDefault();
+    // }
+    
     return (
         <div>
         <h3>Name : {name}</h3>
+        <h3> update name :</h3>
+                {/* <form onSubmit={(event)=> hendleSubmit(event)}> */}
+                <form>
+                    <input type="text" placeholder="change name" name="name" 
+                    onChange={(event) => setIsupdate(event.target.value)}
+                />
+                <button type="submit">submit</button>
+                </form>
         </div>
     )
 }
