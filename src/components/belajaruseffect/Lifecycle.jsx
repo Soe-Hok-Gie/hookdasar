@@ -29,7 +29,8 @@ export default class Lifecycle extends Component {
                 <form>
                     <input type="text" placeholder="change name" name="name" 
                     onChange={(event) => this.setState({name : event.target.value})}
-                    />
+                />
+                <button type="submit">submit</button>
                 </form>
             </div>
         )
