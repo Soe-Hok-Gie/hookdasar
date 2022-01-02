@@ -2,7 +2,7 @@ import React,{useState,useEffect } from 'react'
 
 const Lifecyclehook = () => {
     const [name, setName] = useState("");
-    const [isUpdate, setIsupdate] = useState(false);
+    const [update, setUpdate] = useState(false);
 
     //componentdidMount
     useEffect(() => {
@@ -16,7 +16,24 @@ const Lifecyclehook = () => {
 
     hendleSubmit = (event) =>{
         event.preventDefault();
-    }
+
+            fetch('https://jsonplaceholder.typicode.com/users/1', {
+            method: 'PUT',
+            body: JSON.stringify({
+              id: 1,
+              name:name
+            }),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+          })
+            .then((response) => response.json())
+            .then((json) =>{
+                this.setState({
+                    setUpdate:(true)
+                })
+            });
+    };
     
     return (
         <div>
