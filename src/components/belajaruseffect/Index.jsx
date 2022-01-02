@@ -12,6 +12,9 @@ export default class index extends Component {
     }
     
     render() {
+
+        const {isHide} = this.state
+
         return (
             <div>
                 <h1>perbedaan lifeCycle & hook </h1>
