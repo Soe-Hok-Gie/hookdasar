@@ -5,7 +5,8 @@ export default class index extends Component {
     render() {
         return (
             <div>
-                <h2>perbedaan lifeCycle & hook </h2>
+                <h1>perbedaan lifeCycle & hook </h1>
+                <hr/>
                 <Lifecycle/>
             </div>
         )

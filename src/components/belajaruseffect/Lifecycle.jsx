@@ -24,6 +24,11 @@ export default class Lifecycle extends Component {
         return (
             <div>
                 <h3>Name : {this.state.name}</h3>
+                <hr/>
+                <h3> update name :</h3>
+                <form>
+                    <input type="text" placeholder="change name" name="name" />
+                </form>
             </div>
         )
     }
