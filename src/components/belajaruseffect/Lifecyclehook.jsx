@@ -37,7 +37,15 @@ const Lifecyclehook = () => {
         if (setUpdate) {
             alert('nama berhasil diupdate');
         } 
-    },[setUpdate])
+            },[setUpdate])
+
+       //componentWillUnmount
+       useEffect(() => {
+
+           return() => {
+            console.log('component dicopot');
+        } 
+         },[])
     
     return (
         <div>
