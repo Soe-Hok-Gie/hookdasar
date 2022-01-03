@@ -34,10 +34,10 @@ const Lifecyclehook = () => {
         };
       //componentdidupdate
       useEffect(() => {
-        if (setUpdate) {
+        if (update) {
             alert('nama berhasil diupdate');
         } 
-            },[setUpdate])
+            },[update]) // Only re-run the effect if setUpdate changes
 
        //componentWillUnmount
        useEffect(() => {
